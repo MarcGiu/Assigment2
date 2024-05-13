@@ -30,7 +30,8 @@ jobs:
         run: mvn -B install --file pom.xml
 
       - name: Save build result to file
-        run: echo "Build successful: $(date)" > build_result.txt
+        run: |
+        echo "Build successful: $(date)" > build_result.txt
 
       - name: Commit build result to README
         run: |
