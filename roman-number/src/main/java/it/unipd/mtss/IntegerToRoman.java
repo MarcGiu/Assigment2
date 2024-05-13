@@ -7,11 +7,11 @@ package it.unipd.mtss;
 
 public class IntegerToRoman {
 
-    // Converte i numeri interi nel range [1,10] in numeri romani
+    // Converte i numeri interi nel range [1,20] in numeri romani
     public static String convert(int number){
 
-        if (number<1 || number>10) {
-            throw new IllegalArgumentException(number + " is not in range [1,10]");
+        if (number<1 || number>20) {
+            throw new IllegalArgumentException(number + " is not in range [1,20]");
         }
 
         String roman="";
