@@ -17,7 +17,7 @@ public class IntegerToRomanExeptionsTest {
 
     @Test(expected=IllegalArgumentException.class)
     public void TestError_IllegalMaxArgument() {
-        int number = 7;
+        int number = 11;
         String expected = IntegerToRoman.convert(number);
     }
 

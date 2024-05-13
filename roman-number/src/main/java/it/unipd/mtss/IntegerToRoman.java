@@ -7,19 +7,27 @@ package it.unipd.mtss;
 
 public class IntegerToRoman {
 
-    // Converte i numeri interi nel range [1,6] in numeri romani
+    // Converte i numeri interi nel range [1,10] in numeri romani
     public static String convert(int number){
 
-        if (number<1 || number>6) {
-            throw new IllegalArgumentException(number + " is not in range [1,6]");
+        if (number<1 || number>10) {
+            throw new IllegalArgumentException(number + " is not in range [1,10]");
         }
 
         String roman="";
 
         while (number!=0){
-            if (number>=5) {
-                roman = roman + "V";
-                number = number - 5;
+            if (number>=10){
+                roman=roman+"X";
+                number=number-10;
+            }
+            else if (number>=9){
+                roman=roman+"IX";
+                number=number-9;
+            }
+            else if (number>=5){
+                roman=roman+"V";
+                number=number-5;
             }
             else if (number>=4){
                 roman=roman+"IV";
