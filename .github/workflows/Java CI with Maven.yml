@@ -4,7 +4,6 @@ on:
     branches:
       - master
       - develop
-      
 
 jobs:
   build:
@@ -31,7 +30,7 @@ jobs:
 
       - name: Save build result to file
         run: |
-        echo "Build successful: $(date)" > build_result.txt
+          echo "Build successful: $(date)" > build_result.txt
 
       - name: Commit build result to README
         run: |
@@ -43,4 +42,3 @@ jobs:
           git push origin develop
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-
