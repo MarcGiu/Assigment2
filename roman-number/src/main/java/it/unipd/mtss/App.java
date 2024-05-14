@@ -5,14 +5,14 @@
 
 package it.unipd.mtss;
 
-/**
- * Hello world!
- *
- */
+import java.util.Scanner;
+
 public class App 
 {
-    public static void main( String[] args )
-    {
-        System.out.println( "Hello World!" );
-    }
+    Scanner myObj = new Scanner(System.in);  // Create a Scanner object
+    System.out.println("Enter a number");
+
+    int number = myObj.nextInt();
+    myObj.close();
+    RomanPrinter.print(number);
 }
