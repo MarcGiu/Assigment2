@@ -21,8 +21,8 @@ jobs:
         echo "::set-output name=build-result::$(mvn -B install --file pom.xml)"
     - name: Extract JaCoCo and Coveralls reports
       run: |
-        mvn jacoco:report -DdataFile=target/jacoco.exec
-        mvn jacoco:report-aggregate -DdataFile=target/jacoco.exec
+        mvn jacoco:report -DdataFile=roman-number/target/site/jacoco/jacoco.exec
+        mvn jacoco:report-aggregate -DdataFile=roman-number/target/site/jacoco/jacoco.exec
         mvn coveralls:report
     - name: Update README
       if: always()
