@@ -7,31 +7,39 @@ package it.unipd.mtss;
 
 <span class="nc" id="L8">public class IntegerToRoman {</span>
 
-    // Converte i numeri interi nel range [1,6] in numeri romani
+    // Converte i numeri interi nel range [1,20] in numeri romani
     public static String convert(int number){
 
-<span class="fc bfc" id="L13" title="All 4 branches covered.">        if (number&lt;1 || number&gt;6) {</span>
-<span class="fc" id="L14">            throw new IllegalArgumentException(number + &quot; is not in range [1,6]&quot;);</span>
+<span class="fc bfc" id="L13" title="All 4 branches covered.">        if (number&lt;1 || number&gt;20) {</span>
+<span class="fc" id="L14">            throw new IllegalArgumentException(number + &quot; is not in range [1,20]&quot;);</span>
         }
 
 <span class="fc" id="L17">        String roman=&quot;&quot;;</span>
 
 <span class="fc bfc" id="L19" title="All 2 branches covered.">        while (number!=0){</span>
-<span class="fc bfc" id="L20" title="All 2 branches covered.">            if (number&gt;=5) {</span>
-<span class="fc" id="L21">                roman = roman + &quot;V&quot;;</span>
-<span class="fc" id="L22">                number = number - 5;</span>
+<span class="fc bfc" id="L20" title="All 2 branches covered.">            if (number&gt;=10){</span>
+<span class="fc" id="L21">                roman=roman+&quot;X&quot;;</span>
+<span class="fc" id="L22">                number=number-10;</span>
             }
-<span class="fc bfc" id="L24" title="All 2 branches covered.">            else if (number&gt;=4){</span>
-<span class="fc" id="L25">                roman=roman+&quot;IV&quot;;</span>
-<span class="fc" id="L26">                number=number-4;</span>
+<span class="fc bfc" id="L24" title="All 2 branches covered.">            else if (number&gt;=9){</span>
+<span class="fc" id="L25">                roman=roman+&quot;IX&quot;;</span>
+<span class="fc" id="L26">                number=number-9;</span>
+            }
+<span class="fc bfc" id="L28" title="All 2 branches covered.">            else if (number&gt;=5){</span>
+<span class="fc" id="L29">                roman=roman+&quot;V&quot;;</span>
+<span class="fc" id="L30">                number=number-5;</span>
+            }
+<span class="fc bfc" id="L32" title="All 2 branches covered.">            else if (number&gt;=4){</span>
+<span class="fc" id="L33">                roman=roman+&quot;IV&quot;;</span>
+<span class="fc" id="L34">                number=number-4;</span>
             }
             else {
-<span class="fc" id="L29">                roman=roman+&quot;I&quot;;</span>
-<span class="fc" id="L30">                number--;</span>
+<span class="fc" id="L37">                roman=roman+&quot;I&quot;;</span>
+<span class="fc" id="L38">                number--;</span>
             }
         }
 
-<span class="fc" id="L34">        return roman;</span>
+<span class="fc" id="L42">        return roman;</span>
     }
 }
 </pre><div class="footer"><span class="right">Created with <a href="http://www.jacoco.org/jacoco">JaCoCo</a> 0.8.7.202105040129</span></div></body></html>
