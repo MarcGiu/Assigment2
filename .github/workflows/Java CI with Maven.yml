@@ -17,8 +17,8 @@ jobs:
 
     - name: Build with Maven and JaCoCo
       run: |
-        mvn -B install jacoco:report coveralls:report --file pom.xml
-        echo "::set-output name=build-result::$(mvn -B install --file pom.xml)"
+        mvn -B install jacoco:report coveralls:report --roman-number/pom.xml
+        echo "::set-output name=build-result::$(mvn -B install --roman-number/pom.xml)"
     - name: Extract JaCoCo and Coveralls reports
       run: |
         mvn jacoco:report -DdataFile=roman-number/target/site/jacoco/jacoco.exec
